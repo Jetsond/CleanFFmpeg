@@ -3,11 +3,14 @@ Pod::Spec.new do |s|
   s.version      = '1.0.0'
   s.summary      = 'Local clean FFmpeg for chat video muxing'
   s.description  = 'A local FFmpeg pod built from the workspace source package for chat video sending only.'
-  s.homepage     = 'https://ffmpeg.org'
-  s.license      = { :type => 'LGPL-2.1-or-later', :file => '../FFmpeg-master/LICENSE.md' }
+  s.homepage     = 'https://github.com/Jetsond/CleanFFmpeg.git'
+#  s.license      = { :type => 'LGPL-2.1-or-later', :file => '../FFmpeg-master/LICENSE.md' }
   s.author       = { 'Codex' => 'codex@openai.com' }
   s.platform     = :ios, '13.0'
-  s.source       = { :path => '.' }
+  s.source = {
+    :git => 'https://github.com/Jetsond/CleanFFmpeg.git',
+    :tag => s.version.to_s
+  }
   s.requires_arc  = true
  
   # Headers must also be source files; public_header_files only filters the
