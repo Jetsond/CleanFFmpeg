@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'CleanFFmpeg'
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.summary      = 'Local clean FFmpeg for chat video muxing'
   s.description  = 'A local FFmpeg pod built from the workspace source package for chat video sending only.'
   s.homepage     = 'https://github.com/Jetsond/CleanFFmpeg.git'
