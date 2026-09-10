@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CleanFFmpeg'
-  s.version = '1.0.3'
+  s.version = '1.0.4'
   s.summary = 'Local clean FFmpeg for chat video muxing'
   s.description = 'A clean FFmpeg pod for chat video muxing.'
   s.homepage = 'https://github.com/Jetsond/CleanFFmpeg.git'
@@ -38,6 +38,10 @@ Pod::Spec.new do |s|
 
   s.user_target_xcconfig = {
     'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_TARGET_SRCROOT}/include"',
-    'OTHER_LDFLAGS' => '$(inherited) -force_load "$(PODS_XCFRAMEWORKS_BUILD_DIR)/CleanFFmpeg/libCleanFFmpegCore.a"'
+    # Link the static library slice directly from the downloaded pod source.
+    # The XCFramework copy phase may run after the application link phase,
+    # so its intermediate path is not safe for -force_load.
+    'OTHER_LDFLAGS[sdk=iphonesimulator*]' => '$(inherited) -force_load "$(PODS_ROOT)/CleanFFmpeg/build/CleanFFmpeg.xcframework/ios-arm64_x86_64-simulator/libCleanFFmpegCore.a"',
+    'OTHER_LDFLAGS[sdk=iphoneos*]' => '$(inherited) -force_load "$(PODS_ROOT)/CleanFFmpeg/build/CleanFFmpeg.xcframework/ios-arm64/libCleanFFmpegCore.a"'
   }
 end
