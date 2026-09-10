@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     ]
 
     s.header_mappings_dir = 'include'
-    s.vendored_frameworks = 'artifacts/CleanFFmpeg.xcframework'
+    s.vendored_frameworks = 'build/CleanFFmpeg.xcframework'
 
     s.preserve_paths = [
       'artifacts',
