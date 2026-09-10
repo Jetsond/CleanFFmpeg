@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavcodec
+includedir=/Users/chao/siyu_im_new/3rd/FFmpeg-master
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 63.11.100
+Requires:  libavutil >= 61.7.100
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavcodec -pthread -liconv -lm -lz
+Cflags: -I${includedir}

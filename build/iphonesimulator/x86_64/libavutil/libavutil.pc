@@ -1,0 +1,14 @@
+prefix=/Users/chao/siyu_im_new/3rd/CleanFFmpeg/build/iphonesimulator/x86_64/install
+exec_prefix=${prefix}
+libdir=/Users/chao/siyu_im_new/3rd/CleanFFmpeg/build/iphonesimulator/x86_64/install/lib
+includedir=/Users/chao/siyu_im_new/3rd/CleanFFmpeg/build/iphonesimulator/x86_64/install/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 61.7.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -lm -lz -framework VideoToolbox -pthread -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Libs.private: 
+Cflags: -I${includedir}

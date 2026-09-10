@@ -1,0 +1,7 @@
+libavcodec/ac3tab.o: src/libavcodec/ac3tab.c \
+  /Users/chao/siyu_im_new/3rd/CleanFFmpeg/include/cleanffmpeg_prefix.h \
+  src/libavutil/channel_layout.h src/libavutil/version.h \
+  src/libavutil/macros.h libavutil/avconfig.h src/libavutil/attributes.h \
+  src/libavutil/mathematics.h src/libavutil/rational.h \
+  src/libavutil/intfloat.h src/libavcodec/ac3tab.h \
+  src/libavcodec/ac3defs.h src/libavutil/attributes_internal.h

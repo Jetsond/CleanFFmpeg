@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavutil
+includedir=/Users/chao/siyu_im_new/3rd/FFmpeg-master
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 61.7.100
+Requires: 
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavutil -lm -lz -framework VideoToolbox -pthread -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Cflags: -I${includedir}
