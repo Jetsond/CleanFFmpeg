@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/Jetsond/CleanFFmpeg.git'
   s.license = {
     :type => 'LGPL-2.1-or-later',
-        :file => 'LICENSE'
+    :file => 'LICENSE.md'
   }
   s.author       = { 'Chao' => 'zhangc1993@icloud.com' }
   s.platform     = :ios, '13.0'
@@ -29,10 +29,7 @@ Pod::Spec.new do |s|
     s.header_mappings_dir = 'include'
     s.vendored_frameworks = 'build/CleanFFmpeg.xcframework'
 
-    s.preserve_paths = [
-      'artifacts',
-      'include'
-    ]
+    s.preserve_paths = 'include'
 
     s.pod_target_xcconfig = {
       'DEFINES_MODULE' => 'YES',
